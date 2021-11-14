@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { InstnCalendarComponent } from './instn-calendar/instn-calendar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InstnCalendarComponent
   ],
   imports: [
     BrowserModule
