@@ -1,6 +1,13 @@
-<button (click)="setMonth(-1)">&lt;</button>
-{{date | date}}
-<button (click)="setMonth(+1)">&gt;</button>
+<div class="calendar-header">
+  <div style="display:inline-block" *ngfor day >{{date | date}}</div>
+  <div style="display:inline-block">{{date | date}}</div>
+  <div class="arrows-container">
+    <button (click)="setMonth(-1)" class="left-button">&lt;</button>
+  
+    <button (click)="setMonth(+1)" class="right-button">&gt;</button>
+  </div>
+</div>
+<hr>
 <ul>
   <li class="days" *ngFor="let day of days"> {{day}} </li>
   <li *ngFor="let date of dates"
@@ -9,3 +16,4 @@
     <button>{{date | date:'d'}}</button>
   </li>
 </ul>
+<hr>
